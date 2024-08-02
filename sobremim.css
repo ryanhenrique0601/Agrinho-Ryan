@@ -1,0 +1,210 @@
+/* CSS para o body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #003366, #66ff66); /* Gradiente do azul escuro para verde claro */
+    background-size: 200% 200%; /* Tamanho do gradiente para animação */
+    animation: gradientAnimation 10s ease infinite; /* Animação do gradiente */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* CSS para a barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 150px; /* Aumentar a grossura da barra */
+    background: linear-gradient(to right, #003366, #009966); /* Gradiente mais escuro de azul para verde escuro */
+    background-size: 200% 200%; /* Tamanho do gradiente para animação */
+    animation: navbarGradientAnimation 10s ease infinite; /* Animação do gradiente */
+    color: white;
+    font-size: 28px; /* Aumentar o tamanho da fonte */
+    border-bottom: 5px solid #003366; /* Adicionar uma borda inferior para estética */
+    padding: 0 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Animação do gradiente da barra de navegação */
+@keyframes navbarGradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Faz com que o contêiner da logo ocupe todo o espaço disponível */
+}
+
+.logo-img {
+    width: 100px; /* Tamanho da imagem */
+    height: 100px; /* Tamanho da imagem */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+.logo-text {
+    font-family: 'Georgia', serif; /* Fonte mais bonita */
+    font-weight: bold;
+    font-size: 36px; /* Tamanho da fonte inicial */
+    color: white; /* Cor do texto */
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkgrey; /* Sombra e efeito brilhante */
+    text-align: center; /* Centraliza o texto */
+    flex: 1; /* Faz com que o texto ocupe o espaço disponível */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de aumento de tamanho */
+}
+
+.logo-text:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do texto ao passar o mouse */
+}
+
+.menu-icon {
+    position: absolute;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.menu-icon:hover {
+    transform: scale(1.2); /* Aumenta de tamanho ao passar o mouse */
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 150px; /* Alinhar com a barra de navegação */
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para cor e tamanho */
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+    transform: scale(1.05); /* Aumenta o item do menu ao passar o mouse */
+}
+
+.project-title {
+    text-align: center;
+    font-size: 36px; /* Tamanho do título */
+    font-family: 'Georgia', serif; /* Fonte mais bonita */
+    font-weight: bold;
+    color: #003366; /* Cor do texto */
+    margin: 40px 0; /* Espaçamento superior e inferior */
+}
+
+/* CSS para a seção Sobre Mim */
+.about-me {
+    color: white; /* Cor do texto */
+    padding: 50px 20px;
+    text-align: center;
+    background: none; /* Remove o fundo azul */
+}
+
+.about-me h1 {
+    font-size: 48px; /* Aumenta o tamanho da fonte do título */
+    font-family: 'Georgia', serif; /* Fonte mais bonita */
+    font-weight: bold;
+    color: white; /* Cor do texto */
+    text-shadow: 2px 2px 5px black, 0 0 25px white, 0 0 10px darkgrey; /* Sombra e efeito brilhante */
+    margin-bottom: 20px;
+}
+
+.about-img-container {
+    position: relative; /* Necessário para o posicionamento absoluto do texto */
+}
+
+.about-img {
+    width: 300px; /* Aumenta o tamanho da imagem */
+    height: 300px; /* Aumenta o tamanho da imagem */
+    border-radius: 50%; /* Faz a imagem ficar circular */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    cursor: pointer;
+    transition: transform 0.6s, box-shadow 0.3s; /* Transição suave ao girar e ao adicionar sombra */
+}
+
+.about-img.flipped {
+    transform: rotateY(180deg); /* Gira a imagem 180 graus ao clicar */
+}
+
+.about-description {
+    display: none; /* Inicialmente oculta */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; /* Aumenta a largura da descrição */
+    height: 300px; /* Aumenta a altura da descrição */
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-description.show {
+    display: flex; /* Mostra a descrição quando a classe .show é adicionada */
+    opacity: 1;
+}
+
+.project-description, .project-intention {
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformação e sombra */
+}
+
+.project-description:hover, .project-intention:hover {
+    transform: scale(1.02); /* Aumenta levemente ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Aumenta a sombra ao passar o mouse */
+}
+
+.about-text {
+    max-width: 800px; /* Largura máxima do texto */
+    margin: 0 auto; /* Centraliza o texto */
+}
+
+.about-me p {
+    font-size: 24px; /* Aumenta o tamanho da fonte do parágrafo */
+    line-height: 1.6;
+    margin-top: 0;
+    text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 10px darkgrey; /* Sombra e efeito brilhante */
+}

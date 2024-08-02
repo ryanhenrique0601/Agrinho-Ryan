@@ -1,0 +1,155 @@
+/* CSS para o body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #003366, #66ff66); /* Gradiente do azul escuro para verde claro */
+    background-size: 200% 200%; /* Tamanho do gradiente para animação */
+    animation: gradientAnimation 10s ease infinite; /* Animação do gradiente */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* CSS para a barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça os itens ao longo da barra */
+    position: relative;
+    height: 150px; /* Aumentar a grossura da barra */
+    background: linear-gradient(to right, #003366, #009966); /* Gradiente mais escuro de azul para verde escuro */
+    background-size: 200% 200%; /* Tamanho do gradiente para animação */
+    animation: navbarGradientAnimation 10s ease infinite; /* Animação do gradiente */
+    color: white;
+    font-size: 28px; /* Aumentar o tamanho da fonte */
+    border-bottom: 5px solid #003366; /* Adicionar uma borda inferior para estética */
+    padding: 0 20px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Animação do gradiente da barra de navegação */
+@keyframes navbarGradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.profile-photo {
+    width: 60px; /* Tamanho da foto igual à da página principal */
+    height: 60px;
+    border-radius: 50%; /* Faz a foto ficar redonda */
+    background-image: url('img/logo.jpeg'); /* Caminho da imagem */
+    background-size: cover; /* Cobre todo o elemento */
+    background-position: center; /* Centraliza a imagem */
+    margin-right: 20px; /* Espaçamento entre a foto e o logotipo */
+    border: 2px solid #003366; /* Borda ao redor da foto */
+}
+
+.logo {
+    flex: 1; /* Ocupa o espaço restante da barra de navegação */
+    font-family: 'Georgia', serif; /* Fonte mais bonita */
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px; /* Aumentar o tamanho da fonte */
+    color: white; /* Cor do texto */
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkgrey; /* Sombra e efeito brilhante */
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Aumenta de tamanho ao passar o mouse */
+}
+
+.menu-icon {
+    font-size: 36px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.menu-icon:hover {
+    transform: scale(1.2); /* Aumenta de tamanho ao passar o mouse */
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 150px; /* Alinhar com a barra de navegação */
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para cor e tamanho */
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+    transform: scale(1.05); /* Aumenta o item do menu ao passar o mouse */
+}
+
+.project-title {
+    text-align: center;
+    font-size: 36px; /* Tamanho do título */
+    font-family: 'Georgia', serif; /* Fonte mais bonita */
+    font-weight: bold;
+    color: #003366; /* Cor do texto */
+    margin: 40px 10%; /* Margem para o título */
+    padding: 10px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.research {
+    padding: 20px;
+    margin: 0 10%;
+    background: none; /* Remove o fundo branco */
+    color: #fff; /* Cor do texto */
+}
+
+.research h2 {
+    font-size: 28px;
+    font-family: 'Georgia', serif; /* Fonte mais bonita */
+    color: #fff; /* Cor do texto igual aos parágrafos */
+    margin-bottom: 20px;
+    font-weight: bold; /* Negrito para os títulos */
+}
+
+.research p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Espaçamento inferior entre os parágrafos */
+}
+
+.research ul {
+    margin-left: 20px;
+    margin-bottom: 20px; /* Espaçamento inferior entre as listas */
+}
+
+.research li {
+    font-size: 18px; /* Tamanho do texto dos itens da lista */
+    line-height: 1.6;
+}

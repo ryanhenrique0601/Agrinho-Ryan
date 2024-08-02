@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho: Do campo para a cidade</title>
+    <link rel="stylesheet" href="sobremim.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.jpeg" alt="Logo" class="logo-img">
+            <div class="logo-text">Agrinho: Do campo para a cidade</div>
+        </div>
+        <div class="menu-icon" id="menu-icon">⋮</div>
+    </nav>
+    <div class="dropdown-menu" id="dropdown-menu">
+        <a href="index.html">Início</a>
+        <a href="pagina1.html">Vantagens</a>
+        <a href="pagina2.html">Diferenças</a>
+        <a href="sobremim.html">Sobre mim</a>
+    </div>
+    
+    <section class="about-me">
+        <h1>Programador</h1>
+        <div class="about-img-container">
+            <img src="img/ryanzin.jpg" alt="Minha Foto" class="about-img" id="about-img">
+            
+            </div>
+        </div>
+        <div class="project-description">
+            <h2>Sobre o Agrinho</h2>
+            <p>O projeto Agrinho visa conectar as pessoas com a rica e variada vida rural, trazendo um pedaço do campo para a cidade. Nosso objetivo é compartilhar a beleza e a simplicidade da vida no campo, proporcionando uma experiência enriquecedora e educativa através de produtos e experiências que remetem à vida rural.</p>
+        </div>
+        <div class="project-intention">
+            <h2>Intenção do Projeto</h2>
+            <p>Nosso objetivo é promover um entendimento mais profundo e uma apreciação pela vida rural, mostrando como os valores e práticas do campo podem influenciar positivamente o cotidiano urbano. Queremos encorajar um estilo de vida mais sustentável e autêntico, baseado na conexão com a natureza e com a simplicidade.</p>
+        </div>
+      
+    </section>
+
+    <script>
+        document.getElementById('about-img').addEventListener('click', function() {
+            this.classList.toggle('flipped');
+            document.getElementById('about-description').classList.toggle('show');
+        });
+    </script>
+
+<script src="script.js"></script>
+</body>
+</html>
